@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4W6K7L76F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L4W6K7L76F');
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Leahy - Government</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script async src="https://analytics.umami.is/script.js"
+    data-website-id="d27495e8-9b2c-4e5d-985a-1b7c0adcdc4f"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+   <header class="flex w-full overflow-hidden pt-10 pb-1 topBar">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold">JUSTIN LEAHY</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center ">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+
+                <a href="landscape.html"  class="">LANDSCAPE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="wildlife.html" class="">WILDLIFE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="portrait.html" class="">PORTRAIT
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+
+              </div>
+            </li>
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">WRITING
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+                <a href="ornithology.html" class="">RESEARCH
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="government.html" class="">POLITICS
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                  <a href="journalism.html" class="">OPEDs
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+              </div>
+            </li>
+              <li class="group transition duration-300">
+              <a href="map.html" class="font-signika text-2xl tap-highlight-transparent">MAP
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+                 <li class="group transition duration-300">
+              <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="container mx-auto">
+    <h1 class="text-4xl pt-10 pb-8"><b>GOVERNMENT</b></h1>
+    <div class="grid grid-cols-2 gap-14 md:gap-20">
+      <div class="col-span-2 md:col-span-1">
+        <div
+          class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
+          <img src="images/profiles.jpg" alt=""
+            class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto" />
+          <div class="absolute bottom-0 left-0 right-0 text-center">
+            <p class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo">JFK</p>
+          </div>
+        </div>
+
+      </div>
+      <section class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto">
+        <div class="block md:hidden">
+          <p class="text-3xl font-serif font-bold mb-1">Profiles in Courage</p>
+          <p class="text-3xl font-serif font-bold mb-1">by John Fitzgerald Kennedy</p>
+        </div>
+        <p class="hidden md:block text-3xl font-serif font-bold mb-1">Profiles in Courage by JFK 
+  
+        </p><br>
+      <p>
+         The Profiles in Courage Essay Contest, inspired by John F. Kennedy's book of the same name, invites students to demonstrate their understanding of political courage through an original essay. Participants are required to explore the concept as defined by Kennedy, applying it to a contemporary context. The theme involves describing and analyzing an act of political courage by a U.S. elected official since 1917. The contest encourages originality, advising against common topics, and aims to celebrate historical and contemporary instances of political courage while fostering critical thinking. My participation in the Profiles in Courage Essay Contest consists of my research and reports of Minnesotan Political Figures. </p> <br>
+  <p class="text-3xl font-serif font-bold mb-1"> Read my past essay on <a href="humphrey.html"> Former Vice President Hubert Humphrey. </a> </p>
+      </section>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>JUSTIN LEAHY</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Houston Heights, Texas
+          </p>
+          <div class="flex mx-auto">
+            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              <a class="transition duration-300 hover:opacity-75" href="https://github.com/justinleahy07"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">Github</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                </svg>
+              </a>
+              <a class="transition duration-300 hover:opacity-75" href="https://ebird.org/profile/MTI5NDEyNw/"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">eBird</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <image xlink:href="unnamed.png" width="16" height="16" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+        © <a href="https://www.justleahy.com/about.html">Justin Leahy</a> 2024 | JPL
+      </p>
+    </div>
+  </footer>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+
+</html>

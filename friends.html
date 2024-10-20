@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4W6K7L76F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L4W6K7L76F');
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Leahy - About</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script async src="https://analytics.umami.is/script.js"
+    data-website-id="d27495e8-9b2c-4e5d-985a-1b7c0adcdc4f"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .mapboxgl-popup-content {
+      color: white;
+    }
+
+    #map {
+      height: 400px; /* Adjust the height of the map container */
+    }
+
+    .mapboxgl-popup {
+      max-width: 200px;
+      font-family: Gotham, sans-serif;
+    }
+
+    .mapboxgl-popup-content {
+      padding: 10px;
+    }
+
+    .mapboxgl-popup-content h3 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .mapboxgl-popup-content p {
+      margin-top: 0;
+      margin-bottom: 0;}
+   </style>
+</head>
+ 
+<body>
+
+  <header class="flex w-full overflow-hidden pt-10 pb-1 topBar">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold">JUSTIN LEAHY</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center ">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+           <li class="group transition duration-300">
+              <a href="map.html" class="font-signika text-2xl tap-highlight-transparent">MAP
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+
+                <a href="landscape.html"  class="">LANDSCAPE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="wildlife.html" class="">WILDLIFE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="portrait.html" class="">PORTRAIT
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+
+              </div>
+            </li>
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">WRITING
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+                <a href="ornithology.html" class="">RESEARCH
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="government.html" class="">POLITICS
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                  <a href="journalism.html" class="">OPEDs
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+              </div>
+            </li>
+                 <li class="group transition duration-300">
+              <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="map-page">
+    <!-- Map page content -->
+    <h1>Where Friends Attend College</h1>
+    <!-- Rest of the map page content -->
+    <div id="map"></div>
+
+    <div id="info-window" class="mapboxgl-popup">
+      <div class="mapboxgl-popup-content">
+        <h3 id="info-window-title"></h3>
+        <p id="info-window-description"></p>
+      </div>
+    </div>
+
+    <div id="filters">
+      <h3>Filter by:</h3>
+      <label>
+        <input type="checkbox" id="filter1" />
+        Filter 1
+      </label>
+      <label>
+        <input type="checkbox" id="filter2" />
+        Filter 2
+      </label>
+      <label>
+        <input type="checkbox" id="filter3" />
+        Filter 3
+      </label>
+    </div>
+
+    <div id="map-controls">
+      <button id="toggle-view">Toggle View</button>
+      <div id="scale-bar"></div>
+    </div>
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoianVzdGxlYWh5IiwiYSI6ImNsazJweDE5MjAyeGgzcnRqbGI4dzZuNzgifQ.gx_MnEM5M8x53NO0m1ZbdA';
+
+
+
+     var pinpoints = [
+  {
+    position: { lat: 42.374595, lng:-71.116253 },
+    caption: '(Harvard University) Jahrel Noble, Diane Sun',
+    link: 'harvard.html' // Replace with the link to the page with photos taken at this location
+  },{
+    position: { lat: 42.454360, lng: -76.475026 },
+    caption: '(Cornell University) Levi Chen',
+    link: 'blueridge.html' // Replace with the link to the page with photos taken at this location
+  },{
+    name: 'Carnegie Mellon University',
+    position: { lat: 40.443244, lng: -79.942517 },
+    caption: '(Carnegie Mellon University)',
+    link: 'cmu.html'
+  },{
+    name: 'University of California, Davis (UC Davis)',
+    position: { lat: 38.537323, lng: -121.753283 },
+    caption: '(UC Davis)',
+    link: 'ucdavis.html'
+  },{
+    name: 'University of Virginia (UVA)',
+    position: { lat: 38.033555, lng: -78.507977 },
+    caption: '(University of Virginia)',
+    link: 'uva.html'
+  },
+  {
+    name: 'Stanford University',
+    position: { lat: 37.427475, lng: -122.169716 },
+    caption: '(Stanford University)',
+    link: 'stanford.html'
+  },
+  {
+    name: 'Massachusetts Institute of Technology (MIT)',
+    position: { lat: 42.360091, lng: -71.094160 },
+    caption: '(Massachusetts Institute of Technology)',
+    link: 'mit.html'
+  },
+  {
+    name: 'University of Chicago',
+    position: { lat: 41.789660, lng: -87.599639 },
+    caption: '(University of Chicago)',
+    link: 'uchicago.html'
+  },
+  {
+    name: 'Princeton University',
+    position: { lat: 40.348720, lng: -74.659056 },
+    caption: '(Princeton University)',
+    link: 'princeton.html'
+  },
+  {
+    name: 'Yale University',
+    position: { lat: 41.316324, lng: -72.922343 },
+    caption: '(Yale University)',
+    link: 'yale.html'
+  },
+  {
+    name: 'Columbia University',
+    position: { lat: 40.807535, lng: -73.962572 },
+    caption: '(Columbia University)',
+    link: 'columbia.html'
+  },
+  {
+    name: 'University of Pennsylvania',
+    position: { lat: 39.952583, lng: -75.193628 },
+    caption: '(University of Pennsylvania)',
+    link: 'upenn.html'
+  },
+  {
+    name: 'University of California, Berkeley (UC Berkeley)',
+    position: { lat: 37.871593, lng: -122.260115 },
+    caption: '(UC Berkeley)',
+    link: 'berkeley.html'
+  },
+  {
+    name: 'University of Texas at Austin',
+    position: { lat: 30.284918, lng: -97.734056 },
+    caption: '(University of Texas at Austin)',
+    link: 'utexas.html'
+  },
+  {
+    name: 'Occidental College',
+    position: { lat: 34.127844, lng: -118.210652 },
+    caption: '(Occidental College)',
+    link: 'occidental.html'
+  },
+  {
+    name: 'University of Southern California (USC)',
+    position: { lat: 34.021866, lng: -118.286135 },
+    caption: '(University of Southern California)',
+    link: 'usc.html'
+  },
+  {
+    name: 'University of California, Los Angeles (UCLA)',
+    position: { lat: 34.068921, lng: -118.445181 },
+    caption: '(UCLA)',
+    link: 'ucla.html'
+  },
+
+  // Top 20 Liberal Arts Colleges
+  {
+    name: 'Williams College',
+    position: { lat: 42.712020, lng: -73.203183 },
+    caption: '(Williams College)',
+    link: 'williams.html'
+  },
+  {
+    name: 'Amherst College',
+    position: { lat: 42.373611, lng: -72.524724 },
+    caption: '(Amherst College)',
+    link: 'amherst.html'
+  },
+  {
+    name: 'Swarthmore College',
+    position: { lat: 39.905437, lng: -75.354824 },
+    caption: '(Swarthmore College)',
+    link: 'swarthmore.html'
+  },
+  {
+    name: 'Bowdoin College',
+    position: { lat: 43.907563, lng: -69.963996 },
+    caption: '(Bowdoin College)',
+    link: 'bowdoin.html'
+  },
+  {
+    name: 'Carleton College',
+    position: { lat: 44.461493, lng: -93.155975 },
+    caption: '(Carleton College)',
+    link: 'carleton.html'
+  },
+  {
+    name: 'Middlebury College',
+    position: { lat: 44.015645, lng: -73.167743 },
+    caption: '(Middlebury College)',
+    link: 'middlebury.html'
+  },
+  {
+    name: 'Pomona College',
+    position: { lat: 34.097319, lng: -117.712642 },
+    caption: '(Pomona College)',
+    link: 'pomona.html'
+  },
+  {
+    name: 'Claremont McKenna College',
+    position: { lat: 34.101579, lng: -117.707732 },
+    caption: '(Claremont McKenna College)',
+    link: 'cmc.html'
+  },
+  {
+    name: 'Harvey Mudd College',
+    position: { lat: 34.106439, lng: -117.711784 },
+    caption: '(Harvey Mudd College)',
+    link: 'hmc.html'
+  },{
+    name: 'Washington and Lee University',
+    position: { lat: 37.789693, lng: -79.441349 },
+    caption: '(Washington and Lee University)',
+    link: 'wlu.html'
+  },
+  {
+    name: 'Davidson College',
+    position: { lat: 35.502264, lng: -80.845406 },
+    caption: '(Davidson College)',
+    link: 'davidson.html'
+  }
+      
+];
+
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.5795, 39.8283], // Center the map based on all pinpoints
+        zoom: 3 // Adjust the zoom level as per your preference
+      });
+
+      var infoWindow = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        anchor: 'top',
+        offset: [0, -20]
+      });
+
+      map.on('load', function () {
+        map.addSource('markers', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: pinpoints.map(function (pinpoint) {
+              return {
+                type: 'Feature',
+                geometry: {
+                  type: 'Point',
+                  coordinates: [pinpoint.position.lng, pinpoint.position.lat]
+                },
+                properties: {
+                  caption: pinpoint.caption,
+                  link: pinpoint.link
+                }
+              };
+            })
+          }
+        });
+
+        map.addLayer({
+          id: 'unclustered-point',
+          type: 'circle',
+          source: 'markers',
+          paint: {
+            'circle-color': '#FF9800',
+            'circle-radius': 10,
+            'circle-stroke-width': 2,
+            'circle-stroke-color': '#FFFFFF'
+          }
+        });
+
+        map.on('click', 'unclustered-point', function (e) {
+          var feature = e.features[0];
+          var coordinates = feature.geometry.coordinates.slice();
+          var caption = feature.properties.caption;
+          var link = feature.properties.link;
+
+          infoWindow.setLngLat(coordinates)
+            .setHTML('<h3>' + caption + '</h3><p>Description here</p>')
+            .addTo(map);
+        });
+
+        map.on('mouseenter', 'unclustered-point', function () {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+        map.on('mouseleave', 'unclustered-point', function () {
+          map.getCanvas().style.cursor = '';
+        });
+
+        // Update the map when filters are changed
+        var filters = document.querySelectorAll('#filters input[type="checkbox"]');
+        filters.forEach(function (filter) {
+          filter.addEventListener('change', function () {
+            var activeFilters = Array.from(filters).filter(function (filter) {
+              return filter.checked;
+            }).map(function (filter) {
+              return filter.id;
+            });
+
+            var filteredFeatures = pinpoints.filter(function (pinpoint) {
+              // Customize the conditions based on your requirements and checkbox IDs
+              if (activeFilters.includes('filter1') && !pinpoint.meetsFilter1) {
+                return false;
+              }
+              if (activeFilters.includes('filter2') && !pinpoint.meetsFilter2) {
+                return false;
+              }
+              if (activeFilters.includes('filter3') && !pinpoint.meetsFilter3) {
+                return false;
+              }
+              return true;
+            });
+
+            map.getSource('markers').setData({
+              type: 'FeatureCollection',
+              features: filteredFeatures.map(function (pinpoint) {
+                return {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [pinpoint.position.lng, pinpoint.position.lat]
+                  },
+                  properties: {
+                    caption: pinpoint.caption,
+                    link: pinpoint.link
+                  }
+                };
+              })
+            });
+          });
+        });
+
+        // Add map controls
+        map.addControl(new mapboxgl.NavigationControl());
+        map.addControl(new mapboxgl.ScaleControl({
+          maxWidth: 120,
+          unit: 'imperial' // Adjust the unit as per your preference
+        }));
+
+        // Toggle between street and satellite view
+        var toggleViewButton = document.getElementById('toggle-view');
+        toggleViewButton.addEventListener('click', function () {
+          var currentStyle = map.getStyle();
+          if (currentStyle.name === 'Mapbox Streets') {
+            map.setStyle('mapbox://styles/mapbox/satellite-streets-v11');
+          } else {
+            map.setStyle('mapbox://styles/mapbox/streets-v11');
+          }
+        });
+      });
+    </script>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>JUSTIN LEAHY</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Houston Heights, Texas
+          </p>
+          <div class="flex mx-auto">
+            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              <a class="transition duration-300 hover:opacity-75" href="https://github.com/justinleahy07"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">Github</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                </svg>
+              </a>
+              <a class="transition duration-300 hover:opacity-75" href="https://ebird.org/profile/MTI5NDEyNw/"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">eBird</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <image xlink:href="unnamed.png" width="16" height="16" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+        © <a href="https://www.justleahy.com/about.html">Justin Leahy</a> 2023 | JPL
+      </p>
+    </div>
+  </footer>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+
+</html>

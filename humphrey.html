@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4W6K7L76F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L4W6K7L76F');
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Leahy - Landscape</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script async src="https://analytics.umami.is/script.js"
+    data-website-id="d27495e8-9b2c-4e5d-985a-1b7c0adcdc4f"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+   <header class="flex w-full overflow-hidden pt-10 pb-1 topBar">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold">JUSTIN LEAHY</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center ">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+
+                <a href="landscape.html"  class="">LANDSCAPE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="wildlife.html" class="">WILDLIFE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="portrait.html" class="">PORTRAIT
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+
+              </div>
+            </li>
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">WRITING
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+                <a href="ornithology.html" class="">RESEARCH
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="government.html" class="">POLITICS
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                  <a href="journalism.html" class="">OPEDs
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+              </div>
+            </li>
+              <li class="group transition duration-300">
+              <a href="map.html" class="font-signika text-2xl tap-highlight-transparent">MAP
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+                 <li class="group transition duration-300">
+              <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="container mx-auto">
+    <h1 class="text-4xl pt-10 pb-8 font-bold">HUBERT HUMPHREY - CHAMPION OF 20th CENTURY LIBERALISM</h1>
+<p> Few great speeches begin with a man discussing talking cows. But with this humorous and down to earth introduction, a young, scrawny Minnesotan mayor by the name of Hubert Horatio Humphrey, seemingly out of place at the 1948 Democratic National Convention, somehow ignited a spark that would change the world forever. Democrats at the convention were in complete and utter disarray, having failed to agree on many policy issues. Having “no cause that would bind together the forces of their coalition,” the Democratic Party was suffering from severe infighting (Solberg, 2003, pgs. 11-13). Specifically, the northern liberal and southern conservative factions were divided about the party’s civil rights platform. The Democratic Party, needing a “new lease on life,” threw a life preserver out of their sinking ship in Philadelphia, hoping for some remnant of their Great Depression era success to hang on (Solberg, 2003, pgs. 11-13). Unbeknownst to party leaders, Hubert Humphrey’s political courage put civil rights, racial equality, and liberalism on the map for the Democratic Party for many years to come (Solberg, 2003, pgs. 17-19).
+<br> Northern democrats had tirelessly campaigned for the Democratic Party platform to advocate ending nationwide systematic racial discrimination, but were continuously obstructed by the southern caucus of their party. The northerners held the minority opinion, and party leaders expected that civil rights reform would not be a part of the party’s platform in the upcoming elections. As Hubert Humphrey was a member of the minority northern caucus at the national convention, he was sent into his speech to find common ground on the divisive issue, assigned to advocate for “the platform committee [keeping] the moderate plank designed to appease southern delegates” (The Road to Civil Rights, 2017). Instead, Humphrey—who had aspirations of running for the United States Senate later in the year—risked his political future and began speaking with conviction, straight from his heart (McNutt, 2019). 
+<br> Rather than offer a safe compromise, Humphrey eloquently pushed his minority caucus’s agenda. He boldly declared, “The time has arrived in America for the Democratic Party to get out of the shadow of states’ rights and to walk forthrightly into the bright sunshine of human rights” (Humphrey, 1948). John F. Kennedy later wrote in Profiles in Courage that a courageous politician puts their conviction above their political future, disregarding both pressures and popularity (Kennedy). Kennedy’s words perfectly captured the essence of Humphrey’s actions. Humphrey, disregarding pressures and popularity, put his political career in jeopardy, saying what he believed was right.
+<br> Hubert Humphrey’s rousing speech, calling for the Democratic Party to adopt a strong civil rights plank, surprised the crowded hall of delegates. But rather than the anticipated roar of outrage from the crowd, political embers smoldered throughout. Unexpectedly, after Humphrey’s decisive speech, Democrats’ viewpoints changed on the civil rights policy. What was once seen as the impossible became the future. The northern liberal caucus’s civil rights plank narrowly won (Hamby, 2008). In protest, many southern Democrat delegates walked out of the convention. Eventually, they formed the States’ Rights Dixiecrat Party, obstructing much of the Democrats’ agenda for many decades to come (Hayden, 1966). In the end, it didn’t matter, the seeds were already planted (Hamby, 2008). The long and winding road towards civil rights and racial equality reform took decades before being written into law, but Humphrey momentously set the Democratic Party, and the entire country, on the collision course towards remedying racial injustices (Ferris State University, 2022). In fact, it was Humphrey’s tenacity through more than fifty days of conservative filibuster that helped allow for the passage of the Civil Rights Act of 1964, finally putting into place the piece of legislation that President Kennedy first put forward in 1963. Humphrey was there at the end, just like he was there at the beginning.
+<br> Humphrey's stand at the 1948 Democratic National Convention was a significant act of political courage that put him at odds with many fellow Democrats. While also being a key moment in the history of the Democratic Party and the civil rights movement, it established Humphrey as a leading advocate for civil rights within his party. Without Humphrey, the Democrats may not have been the liberal party in the United States, and our country may have never gone down the path toward civil rights and racial reforms. His willingness to risk his political career in the pursuit of racial justice would come to be seen as one of many defining characteristics of his legacy and career as an elected official. 
+<br> As John F. Kennedy wrote in Profiles in Courage, “Compromise need not mean cowardice… it is frequently the compromisers and conciliators who are faced with the severest tests of political courage as they oppose the extremist views of their constituents” (Kennedy, 1956, pg. 40). When Hubert Humphrey declared “I do not believe that there can be any compromise on the guarantees of the civil rights which we have mentioned in the minority report,” he doubled down on his commitment to civil rights, while opposing and not compromising with the extremist majority views of his convention constituents (Humphrey, 1948). Pushing any fear of political defeat in his upcoming United States Senate bid aside, Humphrey pulled himself up and spoke with conviction about what he believed in as both morally and democratically right, having a lasting impact on both his party and social change in the United States. The young Hubert Horatio Humphrey still inspires us to stand up for our principles, even in the eyes of defeat. And as Lin-Manuel Miranda once wrote, “If you stand for nothing,… what will you fall for?” (Miranda & McCarter, 2016, pg. 25).
+</p> <br>
+  <h3>Works Cited</h3><br>
+ <p> Solberg, C. (2003). Hubert Humphrey: A Biography. Borealis Books.
+<br> Federal Highway Administration. (2017, June 27). The Road to Civil Rights. Highway History. Retrieved January 4, 2023, from https://www.fhwa.dot.gov/highwayhistory/road/road.pdf?CFID=14780473&CFTOKEN=9b13c721b79f2c35-33FD502D-EC97-2094-8B7F01D2105372D1
+<br> Kennedy, John F. (1956, January 1). Profiles In Courage. Internet Archive. Retrieved December 22, 2023, from https://archive.org/details/in.ernet.dli.2015.460987
+<br> Humphrey, H. H. (1948, July 14). Hubert H. Humphrey’s Speech On Civil Rights. Minnesota Historical Society. Retrieved January 6, 2023, from http://www2.mnhs.org/library/findaids/00442/pdfa/00442-00187.pdf
+<br> Hamby, L. (2008, August 1). 1948 Democratic Convention. Smithsonian Magazine. https://www.smithsonianmag.com/history/1948-democratic-convention-878284/
+<br> Hayden, T. (1966). The Power of the Dixiecrats. Civil Rights Movement Archive. Retrieved January 7, 2023, from https://www.crmvet.org/docs/63_sncc_hayden-dixiecrats.pdf
+<br> Ferris State University. (2022). Civil Rights Era - Timeline - Jim Crow Museum. Retrieved January 6, 2023, from https://www.ferris.edu/HTMLS/news/jimcrow/timeline/civilrights.htm
+<br> McNutt, D. (2019, August). The Life and Political Career of Hubert Horatio Humphrey. East Tennessee State University: School of Graduate Studies. Retrieved January 3, 2023, from https://dc.etsu.edu/cgi/viewcontent.cgi?article=5075&context=etd
+<br> Miranda, L., & McCarter, J. (2016). Hamilton: The Revolution (Illustrated). Grand Central Publishing.</p> 
+
+    
+  </div>
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>JUSTIN LEAHY</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Houston Heights, Texas
+          </p>
+          <div class="flex mx-auto">
+            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              <a class="transition duration-300 hover:opacity-75" href="https://github.com/justinleahy07"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">Github</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                </svg>
+              </a>
+              <a class="transition duration-300 hover:opacity-75" href="https://ebird.org/profile/MTI5NDEyNw/"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">eBird</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <image xlink:href="unnamed.png" width="16" height="16" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+        © <a href="https://www.justleahy.com/about.html">Justin Leahy</a> 2024 | JPL
+      </p>
+    </div>
+  </footer><!-- Script for the LightBox -->
+  <script>
+    Fancybox.bind("[data-fancybox]", {});
+  </script>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+
+</html>

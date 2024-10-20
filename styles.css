@@ -1,0 +1,664 @@
+/* Reset CSS */
+  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBlack.otf') format('opentype'),
+    url('fonts/GothamBlack.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBold.otf') format('opentype'),
+    url('fonts/GothamBold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBook.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBookItalic.otf') format('opentype'),
+    url('fonts/GothamBookItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamLight.otf') format('opentype'),
+    url('fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBlack.otf') format('opentype'),
+    url('fonts/GothamBlack.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBold.otf') format('opentype'),
+    url('fonts/GothamBold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBook.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamBookItalic.otf') format('opentype'),
+    url('fonts/GothamBookItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamLight.otf') format('opentype'),
+    url('fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamMedium.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamMediumItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamMedium_1.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamThin.otf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamUltraItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamXLight.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/GothamXLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+.photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1,
+h2 {
+  font-family: "Gotham", sans-serif;
+  /* Use Gotham font for headers */
+  color: #ffffff;
+  margin: 0;
+  font-size: 32px;
+  /* Adjust as needed */
+  line-height: 1.2;
+}
+
+
+
+/* Global Styles */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Gotham", sans-serif;
+  /* Use Gotham font for body */
+  font-size: 16px;
+  line-height: 1.6;
+  border: 0;
+  padding-top: 0;
+  margin-bottom: -15px;
+  margin-top: -15px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Gotham", sans-serif;
+  /* Use Gotham font for links */
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  color: inherit;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Gotham", sans-serif;
+  /* Use Gotham font for header */
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ulMenu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav .logo {
+  color: #000000;
+  /* Black header logo color */
+  font-size: 24px;
+  font-family: "LTC Bodoni 175", serif;
+  /* Changed the font to LTC Bodoni 175 */
+}
+
+
+main {
+  padding: 20px;
+  margin-top: 20px;
+  /* Increased space between "landscape photography" and the first row of photos */
+}
+
+
+footer {
+  background-color: #000000;
+  /* Sage footer background */
+  color: #ffffff;
+  /* Black footer text color */
+  padding: 20px;
+  text-align: center;
+  font-family: "Gotham", sans-serif;
+  /* Changed the font to LTC Bodoni 175 */
+}
+
+footer p {
+  font-size: 14px;
+  margin: -5px;
+  font-family: "Gotham", sans-serif;
+  /* Changed the font to League Spartan */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Home Page */
+#home .hero {
+  text-align: center;
+}
+
+#home .hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+#home .hero h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Portfolio Page */
+#portfolio h1 {
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  /* Increase margin to add more space between photos */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+
+.photo {
+  position: relative;
+  flex: 0 0 calc(33.33% - 30px);
+  /* Three photos fit in each row with increased margin */
+  margin: 10px;
+  /* Increased margin on all sides */
+  overflow: hidden;
+  border-radius: 10px;
+  /* Rounded corners for photos */
+  border: .75px solid #000000;
+  /* #7b9da7 color border around photos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Light shadow effect for photos */
+  transition: transform 0.2s ease-in-out;
+  /* Smooth transition on hover */
+}
+
+.photo:last-child {
+  margin-right: 0;
+  /* Remove margin-right for the last photo in each row */
+}
+
+
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+.caption {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.photo p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+/* Specific style for the heading links */
+header nav .menu li a {
+  color: #000000;
+  font-family: "League Spartan", sans-serif;
+  /* Changed the font to League Spartan */
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  color: inherit;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0px 0x;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+nav ul li:hover > ul.dropdown {
+  display: block;
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li a {
+    border-bottom: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+
+nav ul ul.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  padding: 20px;
+  top: 100%;
+}
+
+nav ul ul.dropdown li {
+  display: block;
+  width: 150px;
+}
+
+nav ul ul.dropdown li a {
+  padding: 10px 20px;
+  color: black;
+}
+
+nav ul ul.dropdown li:hover {
+  background-color: #000000;
+}
+
+
+/* Home Page */
+#home .welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#home .welcome-content {
+  flex: 0 0 50%;
+  padding-right: 20px;
+}
+
+#home .welcome-content h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+#home .welcome-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#home .photo-container {
+  flex: 0 0 50%;
+}
+
+#home .photo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* About Page */
+#about .welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#about .welcome-content {
+  flex: 0 0 50%;
+  padding-left: 20px;
+}
+
+#about .welcome-content h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+#about .welcome-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#about .photo-container {
+  flex: 0 0 50%;
+}
+
+#about .photo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Unround the corners of the about page photo */
+#about .photo {
+  border-radius: 0;
+}
+
+#map-page {
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+#map h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+
+#portfolioDropdown {
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 0;
+  transform: translateY(-6rem);
+  transition: .5s cubic-bezier(0, 0, 0.2, 1);
+
+}
+
+#portfolioBox {
+  height: max-content;
+
+}
+
+#portfolioBox:hover #portfolioDropdown {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  transform: translateY(0rem);
+}
+
+#portfolioDropdown a {
+  font-family: Signika;
+
+  font-size: 1.1rem;
+  transition: .15s;
+}
+
+
+.dropdownText span {
+  height: 1.5px;
+}
+#portfolioDropView {
+  padding-top: 1.8rem;
+  margin-top: -1.8rem;
+  z-index: 1;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  #portfolioDropView {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  #portfolioDropdown{
+    z-index: 100;
+  }
+
+}
+
+
+@media (prefers-color-scheme: light) {
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: black;
+  }
+
+  header,
+  footer {
+    color: black;
+    background-color: white;
+  }
+
+  #nav a,
+  footer a {
+    color: black;
+  }
+
+  #portfolioDropView {
+    background-color: white;
+  }
+}
+
+#nav>div>div.mr-4.md\:mr-8>a {
+  transition: .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+#nav>div>div.mr-4.md\:mr-8>a:hover {
+  font-size: 1.6rem;
+}
+
+#email,
+#subject,
+#message {
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+#email:hover,
+#subject:hover,
+#message:hover {
+  border: 1px solid rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#email:focus,
+#subject:focus,
+#message:focus {
+  border: 1px solid rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+#message {
+  margin-bottom: 1rem;
+}
+
+body>div:nth-child(3)>div>section>div>form>button:hover {
+  filter: brightness(90%);
+}
+
+div.bg-white:not(body > div:nth-child(2) > div > div > div) {
+  background-color: white;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH8SW31QP"></script>
+  <script async src="https://analytics.umami.is/script.js" data-website-id="d27495e8-9b2c-4e5d-985a-1b7c0adcdc4f"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SFH8SW31QP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Photography Portfolio</title>
+  
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="header-left">
+        <div class="logo">
+          <a href="index.html">Justin Leahy</a>
+        </div>
+      </div>
+      <div class="header-right">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="landscape.html">Landscape</a></li><br>
+              <li><a href="portrait.html">Portrait</a></li><br>
+              <li><a href="wildlife.html">Wildlife</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="map.html">Map</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Trip Title -->
+  <h1 style="text-align: center; margin-top: 20px;">Trip X</h1>
+
+  <!-- Slideshow Container -->
+  <div class="slideshow-container">
+    <!-- Full images with numbers and message info -->
+    <img src="goat.jpg" alt="Image 1">
+    <img src="angel.jpg" alt="Image 2">
+    <img src="angel.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4">
+    <img src="image5.jpg" alt="Image 5">
+    <img src="image6.jpg" alt="Image 6">
+    <img src="image7.jpg" alt="Image 7">
+    <img src="image8.jpg" alt="Image 8">
+    <img src="image9.jpg" alt="Image 9">
+    <img src="image10.jpg" alt="Image 10">
+
+    <!-- Back and Forward buttons -->
+    <button class="back" onclick="plusSlides(-1)">&lt;</button>
+    <button class="forward" onclick="plusSlides(1)">&gt;</button>
+  </div>
+
+  <!-- Dots/Indicators -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div>
+
+  <!-- JavaScript for slideshow functionality -->
+  <script>
+    var slidePosition = 1;
+    SlideShow(slidePosition);
+
+    // Forward/Back controls
+    function plusSlides(n) {
+      SlideShow(slidePosition += n);
+    }
+
+    // Image controls
+    function currentSlide(n) {
+      SlideShow(slidePosition = n);
+    }
+
+    function SlideShow(n) {
+      var i;
+      var slides = document.getElementsByTagName("img");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slidePosition = 1; }
+      if (n < 1) { slidePosition = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      slides[slidePosition - 1].style.display = "block";
+      dots[slidePosition - 1].classList.add("active");
+    }// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+  </script>
+
+  <footer>
+    <p>© Justin Leahy 2023 | JPL</p>
+  </footer>
+
+</body>
+</html>
+

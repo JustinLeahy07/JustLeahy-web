@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4W6K7L76F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L4W6K7L76F');
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Leahy - Map</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script async src="https://analytics.umami.is/script.js"
+    data-website-id="d27495e8-9b2c-4e5d-985a-1b7c0adcdc4f"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="cropped.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #map {
+      height: 500px;
+    }
+  
+#map-page {
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+#map h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}   
+  </style>
+</head>
+
+<body
+  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+   <header class="flex w-full overflow-hidden pt-10 pb-1 topBar">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold">JUSTIN LEAHY</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center ">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+
+                <a href="landscape.html"  class="">LANDSCAPE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="wildlife.html" class="">WILDLIFE
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="portrait.html" class="">PORTRAIT
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+
+              </div>
+            </li>
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">WRITING
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+              <div id="portfolioDropdown">
+                <a href="ornithology.html" class="">RESEARCH
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                <a href="government.html" class="">POLITICS
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+                  <a href="journalism.html" class="">OPEDs
+                  <span
+                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                </a>
+              </div>
+            </li>
+              <li class="group transition duration-300">
+              <a href="map.html" class="font-signika text-2xl tap-highlight-transparent">MAP
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+                 <li class="group transition duration-300">
+              <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- Map page content -->
+    <h1 class="text-4xl pt-10 pb-8 font-bold">MY FAVORITE TRAVELS</h1>
+<br>    <div id="map"></div> </main>
+
+    <script>
+      function initMap() {
+        // Define an array of pinpoints with their coordinates and captions
+        var pinpoints = [
+          {
+            position: { lat: 33.8734, lng: -115.9010 },
+            caption: 'Joshua Tree National Park',
+            link: 'joshuatree.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 35.35486, lng: -82.990414 },
+            caption: 'Blue Ridge Mountains',
+            link: 'blueridge.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 38.189466, lng: -109.887094 },
+            caption: 'Canyonlands National Park',
+            link: 'canyonlands.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 38.42523, lng: -109.33481 },
+            caption: 'Arches National Park',
+            link: 'arches.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 32.780361, lng: -106.171448 },
+            caption: 'White Sands National Park',
+            link: 'whitesands.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 33.221610, lng: -108.242200 },
+            caption: 'Gila Cliffs National Monument',
+            link: 'gilacliffs.html' // Replace with the link to the page with photos taken at this location
+          },
+           {
+            position: { lat: 32.179534912109375, lng: -110.73770141601562 },
+            caption: 'Saguaro National Park',
+            link: 'saguaro.html' // Replace with the link to the page with photos taken at this location
+          },
+            {
+            position: { lat: 32.4423611, lng: -110.7889994 },
+            caption: 'Mount Lemmon',
+            link: 'lemmon.html' // Replace with the link to the page with photos taken at this location
+          },
+           {
+            position: { lat: 32.06032943725586, lng: -112.89244842529297 },
+            caption: 'Organ Pipe Cactus National Monument',
+            link: 'organpipe.html' // Replace with the link to the page with photos taken at this location
+          },
+           {
+            position: { lat: 32.00537109375, lng: -109.35655212402344 },
+            caption: 'Chiricahua National Monument',
+            link: 'chiricahua.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 39.58828353881836, lng: -105.6435775756836 },
+            caption: 'Mount Evans',
+            link: 'evans.html' // Replace with the link to the page with photos taken at this location
+          },
+           {
+            position: { lat: 40.38689041137695, lng: -105.61014556884766 },
+            caption: 'Rocky Mountain National Park',
+            link: 'rockymountain.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 38.57161331176758, lng: -107.7272720336914 },
+            caption: 'Black Canyon of the Gunnison National Park',
+            link: 'blackcanyon.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 39.04478454589844, lng: -108.69049072265625 },
+            caption: 'Colorado National Monument',
+            link: 'colorado.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 37.23203659057617, lng: -108.45928955078125 },
+            caption: 'Mesa Verde National Park',
+            link: 'mesaverde.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 33.33375, lng: -117.074667 },
+            caption: 'San Diego',
+            link: 'sandiego.html' // Replace with the link to the page with photos taken at this location
+          },
+          {
+            position: { lat: 34.035591, lng: -118.689423 },
+            caption: 'Highway 1 California',
+            link: 'highway1.html' // Replace with the link to the page with photos taken at this location
+          },
+       ];
+
+        // Create a map centered at the first pinpoint
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10, // Adjust the zoom level as per your preference
+          zoomControl: true, // Enable zoom controls
+          mapTypeControl: true, // Enable map type controls
+          fullscreenControl: true // Enable fullscreen control
+        });
+
+        // Create a LatLngBounds object to encapsulate all the pinpoints
+        var bounds = new google.maps.LatLngBounds();
+
+        // Iterate through the pinpoints array and add markers to the map
+        for (var i = 0; i < pinpoints.length; i++) {
+          var pinpoint = pinpoints[i];
+
+          // Create a marker with the specified position
+          var marker = new google.maps.Marker({
+            position: pinpoint.position,
+            map: map,
+            title: pinpoint.caption
+          });
+
+          // Extend the bounds with each pinpoint's position
+          bounds.extend(pinpoint.position);
+
+          // Add an event listener to redirect to the specified page when the marker is clicked
+          marker.addListener('click', function (pinpoint) {
+            return function () {
+              window.location.href = pinpoint.link;
+            };
+          }(pinpoint));
+
+          // Add an info window to display the caption when the marker is clicked
+          marker.addListener('click', function (pinpoint) {
+            return function () {
+              var infowindow = new google.maps.InfoWindow({
+                content: '<div><h3>' + pinpoint.caption + '</h3><p>Description here</p></div>'
+              });
+              infowindow.open(map, marker);
+            };
+          }(pinpoint));
+        }
+
+        // Fit the map to the bounds
+        map.fitBounds(bounds);
+
+        // Apply custom styles to the map
+        map.setOptions({
+          styles: [
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{ color: '#c9c9c9' }]
+            },
+            {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [{ color: '#f2f2f2' }]
+            },
+            // Add more custom styles as per your preference
+          ]
+        });
+
+        // Create a map type control to switch between satellite and street view
+        var mapTypeControlDiv = document.createElement('div');
+        var mapTypeControl = new MapTypeControl(mapTypeControlDiv, map);
+        mapTypeControlDiv.index = 1; // Position the control on top of other controls
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(mapTypeControlDiv);
+      }
+
+      // Custom control to switch between map types
+      function MapTypeControl(controlDiv, map) {
+        // Set CSS for the control border
+        var controlUI = document.createElement('div');
+        controlUI.style.backgroundColor = '#fff';
+        controlUI.style.border = '2px solid #fff';
+        controlUI.style.borderRadius = '3px';
+        controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        controlUI.style.cursor = 'pointer';
+        controlUI.style.marginTop = '10px';
+        controlUI.style.marginRight = '10px';
+        controlUI.style.textAlign = 'center';
+        controlDiv.appendChild(controlUI);
+
+        // Set CSS for the control interior
+        var controlText = document.createElement('div');
+        controlText.style.color = 'rgb(25,25,25)';
+        controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+        controlText.style.fontSize = '14px';
+        controlText.style.lineHeight = '30px';
+        controlText.style.paddingLeft = '5px';
+        controlText.style.paddingRight = '5px';
+        controlText.innerHTML = '<b>Satellite</b>';
+        controlUI.appendChild(controlText);
+
+        // Switch between map types on click
+        var isSatellite = false;
+        controlUI.addEventListener('click', function () {
+          if (isSatellite) {
+            map.setMapTypeId('roadmap');
+            controlText.innerHTML = '<b>Satellite</b>';
+          } else {
+            map.setMapTypeId('satellite');
+            controlText.innerHTML = '<b>Street</b>';
+          }
+          isSatellite = !isSatellite;
+        });
+      }
+ </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQSLLXw_qWo67DaC26G1caMljQ6QE5IVk&callback=initMap" async defer></script>
+
+
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>JUSTIN LEAHY</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Houston Heights, Texas
+          </p>
+          <div class="flex mx-auto">
+            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              <a class="transition duration-300 hover:opacity-75" href="https://github.com/justinleahy07"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">Github</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                </svg>
+              </a>
+              <a class="transition duration-300 hover:opacity-75" href="https://ebird.org/profile/MTI5NDEyNw/"
+                target="_blank" rel="noreferrer">
+                <span class="sr-only">eBird</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <image xlink:href="unnamed.png" width="16" height="16" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+        © <a href="https://www.justleahy.com/about.html">Justin Leahy</a> 2024 | JPL
+      </p>
+    </div>
+  </footer>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+
+</html>
