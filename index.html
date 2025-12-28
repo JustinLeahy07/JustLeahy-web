@@ -13,9 +13,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Justin Leahy is a Yale-based researcher exploring conservation, birds, and public lands through fieldwork and photography." />
-  <link rel="canonical" href="https://www.justleahy.com/index.html" />
   <title>Justin Leahy</title>
   <!-- Favicon -->
   <link rel="icon" href="images/cropped.jpg" type="image/x-icon">
@@ -42,7 +39,6 @@
 
 <body
   class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Navbar -->
       <header class="flex w-full overflow-hidden pt-10 pb-1 topBar">
     <!-- Navbar -->
@@ -73,13 +69,11 @@
           class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center ">
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
-            <li class="group transition duration-300 relative" id="portfolioBox">
-              <button id="portfolioDropView" type="button" aria-expanded="false" aria-controls="portfolioDropdown"
-                class="font-signika text-2xl tap-highlight-transparent flex items-center gap-2 focus:outline-none">
-                PORTFOLIO
+            <li class="group transition duration-300" id="portfolioBox">
+              <a id="portfolioDropView" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
                 <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </button>
-              <div id="portfolioDropdown" role="menu">
+              </a>
+              <div id="portfolioDropdown">
 
                 <a href="landscape.html"  class="">LANDSCAPE
                   <span
@@ -117,8 +111,8 @@
   <!-- Content -->
   <div class="container mx-auto">
     <h1 class="text-4xl pt-10 pb-8"><b></b></h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20">
-      <div class="col-span-1 md:col-span-1">
+    <div class="grid grid-cols-2 gap-14 md:gap-20">
+      <div class="col-span-2 md:col-span-1">
         <div
           class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
           <img src="images/sandiego.jpg" alt=""
@@ -129,13 +123,16 @@
         </div>
 
       </div>
-      <section id="main-content" class="font-normal text-center text-base md:text-start mx-3 col-span-1 md:col-span-1 my-auto">
-        <div class="flex flex-col space-y-3 md:space-y-3">
-          <p class="text-2xl md:text-3xl font-serif font-bold"> I'm <a href="about.html">Justin Leahy</a>.</p>
-          <p class="text-2xl md:text-3xl font-serif font-bold"> I study environments, birds, and public lands.</p>
-          <p class="text-2xl md:text-3xl font-serif font-bold"> I’m currently at Yale.</p>
-          <p class="text-2xl md:text-3xl font-serif font-bold">  I work through field research, photography, and independent projects focused on conservation and environmental policy.</p>
-        </div>
+      <section class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto">
+        
+        <p class="hidden md:block text-3xl font-serif font-bold mb-1"> I'm <a href="about.html">Justin Leahy</a>.
+        </p><br>
+        <p class="hidden md:block text-3xl font-serif font-bold mb-1"> I study environments, birds, and public lands. 
+        </p><br>
+        <p class="hidden md:block text-3xl font-serif font-bold mb-1"> I’m currently at Yale.
+        </p><br>
+        <p class="hidden md:block text-3xl font-serif font-bold mb-1">  I work through field research, photography, and independent projects focused on conservation and environmental policy. 
+        </p><br>
       </section>
     </div>
   </div>
