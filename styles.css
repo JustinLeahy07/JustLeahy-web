@@ -539,9 +539,6 @@ nav ul ul.dropdown li:hover {
 
 
 #portfolioDropdown {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
   position: absolute;
   border-radius: 5px;
   /* background-color: rgb(0, 0, 0); (change back, but testing right now) */
@@ -559,13 +556,9 @@ nav ul ul.dropdown li:hover {
 
 }
 
-#portfolioBox:hover #portfolioDropdown,
-#portfolioBox:focus-within #portfolioDropdown,
-#portfolioBox.open #portfolioDropdown {
+#portfolioBox:hover #portfolioDropdown {
   display: flex;
   background-color: rgb(0, 0, 0);
-  opacity: 1;
-  pointer-events: auto;
   transform: translateY(0rem);
 }
 
@@ -595,27 +588,8 @@ nav ul ul.dropdown li:hover {
   }
   #portfolioDropdown{
     z-index: 100;
-    position: relative;
-    transform: translateY(0);
   }
 
-}
-
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: 10px;
-  background-color: #0f172a;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  z-index: 1000;
-  text-decoration: none;
-  transition: left 0.2s ease;
-}
-
-.skip-link:focus {
-  left: 1rem;
 }
 
 
